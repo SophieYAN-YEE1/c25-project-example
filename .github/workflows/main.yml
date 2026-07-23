@@ -13,6 +13,8 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v7
       - name: "Install Python"
+        uses: actions/checkout-python@v7
+      - name: "Set Up Python"
         uses: actions/setup-python@v7
         with:
           python-version: '3.14'
