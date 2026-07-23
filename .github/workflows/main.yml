@@ -7,13 +7,17 @@ on:
 
 # Action(s)
 jobs:
-  speak:
-    name: "Say something."
-    runs-on: ubuntu-latest
+  qa:
+    name: "Quality Assurance"
+    runs-on: ubuntu-linux
     steps:
-      - name: "actually do something"
-        run: echo "Hi"
-      - name: "demonstrate sequence:"
-        run: echo "Hello"
-      - name: "more commands"
-        run: ls -lah
+      - name: "Checkout repository"
+        uses: actions/checkout@v7
+      - name: "Install Python"
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+      - name: "Install libraries"
+        run: pip3 install -r requirements.txt
+      - name: "Runs tests"
+        run: pytest
