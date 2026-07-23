@@ -5,3 +5,9 @@ Week 6
 
 - Create and activate new virtual environment
 - pip install -r requirements.txt
+
+
+## Quality Assurance
+
+- Run test with 'pytest'
+- Run linting with 'pylint *.py'
