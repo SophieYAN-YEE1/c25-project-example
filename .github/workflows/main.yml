@@ -8,7 +8,7 @@ on:
 jobs:
   qa:
     name: "Quality Assurance"
-    runs-on: ubuntu-linux
+    runs-on: ubuntu-latest
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@v7
